@@ -1,0 +1,1 @@
+moduleSearchIndex = [{"l":"org.tquadrat.foundation.i18n"}];updateSearchResults();
