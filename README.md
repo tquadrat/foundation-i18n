@@ -1,5 +1,7 @@
-# tquadrat *Foundation Library*
-## `foundation-i18n`
+This library helps with the internationalisation of an application; it allow the generation of `properties` files for `ResourceBundle` from annotated Strings in the code. 
+
+Refer also to [`foundation-i18n-ap`](https://tquadrat.github.io/foundation-i18n-ap/) 
+
 ### Documentation
 
-- [Javadoc Reference](https://htmlpreview.github.io/?https://github.com/tquadrat/foundation-i18n/blob/master/javadoc/index.html)
+- [Javadoc Reference](https://tquadrat.github.io/foundation-i18n/javadoc/index.html)
