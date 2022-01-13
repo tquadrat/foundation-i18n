@@ -6,7 +6,7 @@ Refer also to [`foundation-i18n-ap`](https://tquadrat.github.io/foundation-i18n-
 
 - [Javadoc Reference](https://tquadrat.github.io/foundation-i18n/javadoc/index.html)
 
-- Maven POMMaven POM
+- Maven POM
     ```xml
     <dependency>
       <groupId>org.tquadrat.library</groupId>
@@ -15,13 +15,13 @@ Refer also to [`foundation-i18n-ap`](https://tquadrat.github.io/foundation-i18n-
     </dependency>
     ```
 - Gradle
-    ```gradle
-    <dependencies>
+    ```Groovy
+    dependencies {
       …
   
       //---* The tquadrat Internationalisation stuff *------------------------
       implementation 'org.tquadrat.library:org.tquadrat.foundation.i18n:0.1.0'
       annotationProcessor 'org.tquadrat.tool:org.tquadrat.foundation.i18n.ap:0.1.0'
       …
-    </dependencies>
+    }  //  dependencies
     ```
