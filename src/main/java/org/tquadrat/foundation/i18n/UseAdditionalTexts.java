@@ -52,18 +52,16 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  file.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: UseAdditionalTexts.java 887 2021-03-28 19:25:19Z tquadrat $
+ *  @version $Id: UseAdditionalTexts.java 984 2022-01-13 00:46:27Z tquadrat $
  *  @since 0.1.0
  *
  *  @see I18nUtil#ADDITIONAL_TEXT_LOCATION
  *  @see I18nUtil#ADDITIONAL_TEXT_FILE
- *
- *  @UMLGraph.link
  */
 @Documented
 @Retention( SOURCE )
 @Target( {TYPE, PACKAGE, MODULE} )
-@ClassVersion( sourceVersion = "$Id: UseAdditionalTexts.java 887 2021-03-28 19:25:19Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: UseAdditionalTexts.java 984 2022-01-13 00:46:27Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public @interface UseAdditionalTexts
 {

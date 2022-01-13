@@ -74,8 +74,9 @@ loadScripts(document, 'script');</script>
   an application (and, with some limitations, of a library). It provides
   annotations that allows to have multiple translations for a text directly
   in the source code. The annotation processor component provided with the
-  project <code>org.tquadrat.foundation.i18n.ap</code> externalises these texts to
-  regular resource bundle properties files.</p>
+  project
+  <a href="https://tquadrat.github.io/foundation-i18n-ap">org.tquadrat.foundation.i18n.ap</a>
+  externalises these texts to regular resource bundle properties files.</p>
   <p>For the configuration of the annotation processor, refer to the
   documentation for that project.</p>
 
@@ -102,7 +103,7 @@ loadScripts(document, 'script');</script>
   <h3><a id="h3_i18n_annotations">The Annotations for the I18N feature</a></h3>
   <p>The internationalisation feature provides six annotations in total:</p>
   <ul>
-      <li><a href="#h4_basebundlename"><code>&#64;BaseBundeName</code></a></li>
+      <li><a href="#h4_basebundlename"><code>&#64;BaseBundleName</code></a></li>
       <li><a href="#h4_message"><code>&#64;Message</code></a></li>
       <li><a href="#h4_message_prefix"><code>&#64;MessagePrefix</code></a></li>
       <li><a href="#h4_text"><code>&#64;Text</code></a></li>
@@ -156,7 +157,7 @@ loadScripts(document, 'script');</script>
   <span class="source-line-no">003</span> *  The base bundle name.
   <span class="source-line-no">004</span> *&#47;
   <span class="source-line-no">005</span>&#064;BaseBundleName( defaultLanguage = "de", createResourceBundleProvider = false )
-  <span class="source-line-no">006</span>public final static String m_BaseBundleName = "com.test.Messages";
+  <span class="source-line-no">006</span>public static final String m_BaseBundleName = "com.test.Messages";
   <span class="source-line-no">007</span>
   <span class="source-line-no">008</span>&hellip;</pre></div>
 
@@ -179,7 +180,7 @@ loadScripts(document, 'script');</script>
   <span class="source-line-no">003</span> *  The message prefix.
   <span class="source-line-no">004</span> *&#47;
   <span class="source-line-no">005</span>&#064;MessagePrefix
-  <span class="source-line-no">006</span>public final static String m_MessagePrefix = "SFX";
+  <span class="source-line-no">006</span>public static final String m_MessagePrefix = "SFX";
   <span class="source-line-no">007</span>
   <span class="source-line-no">008</span>&hellip;</pre></div>
 

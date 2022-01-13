@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2021 by Thomas Thrien.
+ * Copyright © 2002-2022 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -19,8 +19,9 @@
  *  an application (and, with some limitations, of a library).} It provides
  *  annotations that allows to have multiple translations for a text directly
  *  in the source code. The annotation processor component provided with the
- *  project {@code org.tquadrat.foundation.i18n.ap} externalises these texts to
- *  regular resource bundle properties files.</p>
+ *  project
+ *  {@href https://tquadrat.github.io/foundation-i18n-ap org.tquadrat.foundation.i18n.ap}
+ *  externalises these texts to regular resource bundle properties files.</p>
  *  <p>For the configuration of the annotation processor, refer to the
  *  documentation for that project.</p>
  *
@@ -47,7 +48,7 @@
  *  <h3>{@anchor #h3_i18n_annotations The Annotations for the I18N feature}</h3>
  *  <p>The internationalisation feature provides six annotations in total:</p>
  *  <ul>
- *      <li>{@href #h4_basebundlename <code>&#64;BaseBundeName</code>}</li>
+ *      <li>{@href #h4_basebundlename <code>&#64;BaseBundleName</code>}</li>
  *      <li>{@href #h4_message <code>&#64;Message</code>}</li>
  *      <li>{@href #h4_message_prefix <code>&#64;MessagePrefix</code>}</li>
  *      <li>{@href #h4_text <code>&#64;Text</code>}</li>
@@ -101,7 +102,7 @@
  *  <span class="source-line-no">003</span> *  The base bundle name.
  *  <span class="source-line-no">004</span> *&#47;
  *  <span class="source-line-no">005</span>&#064;BaseBundleName( defaultLanguage = "de", createResourceBundleProvider = false )
- *  <span class="source-line-no">006</span>public final static String m_BaseBundleName = "com.test.Messages";
+ *  <span class="source-line-no">006</span>public static final String m_BaseBundleName = "com.test.Messages";
  *  <span class="source-line-no">007</span>
  *  <span class="source-line-no">008</span>&hellip;</pre></div>
  *
@@ -124,7 +125,7 @@
  *  <span class="source-line-no">003</span> *  The message prefix.
  *  <span class="source-line-no">004</span> *&#47;
  *  <span class="source-line-no">005</span>&#064;MessagePrefix
- *  <span class="source-line-no">006</span>public final static String m_MessagePrefix = "SFX";
+ *  <span class="source-line-no">006</span>public static final String m_MessagePrefix = "SFX";
  *  <span class="source-line-no">007</span>
  *  <span class="source-line-no">008</span>&hellip;</pre></div>
  *
