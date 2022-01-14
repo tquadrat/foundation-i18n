@@ -27,7 +27,6 @@ module org.tquadrat.foundation.i18n
     requires java.base;
 
     //---* The foundation modules *--------------------------------------------
-    requires transitive org.tquadrat.foundation.base;
     requires transitive org.tquadrat.foundation.util;
 
     //---* The exports *-------------------------------------------------------
