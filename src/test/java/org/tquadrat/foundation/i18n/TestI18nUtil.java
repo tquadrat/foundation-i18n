@@ -18,16 +18,21 @@
 package org.tquadrat.foundation.i18n;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.tquadrat.foundation.i18n.I18nUtil.composeTextKey;
+import static org.tquadrat.foundation.i18n.I18nUtil.loadResourceBundle;
 import static org.tquadrat.foundation.i18n.TextUse.BUTTON;
 import static org.tquadrat.foundation.i18n.TextUse.STRING;
 import static org.tquadrat.foundation.i18n.TextUse.TXT;
+import static org.tquadrat.foundation.lang.CommonConstants.EMPTY_STRING;
 import static org.tquadrat.foundation.util.StringUtils.format;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.tquadrat.foundation.annotation.ClassVersion;
+import org.tquadrat.foundation.exception.EmptyArgumentException;
+import org.tquadrat.foundation.exception.NullArgumentException;
 import org.tquadrat.foundation.testutil.TestBaseClass;
 
 /**
@@ -36,8 +41,7 @@ import org.tquadrat.foundation.testutil.TestBaseClass;
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
  */
-@SuppressWarnings( "MisorderedAssertEqualsArguments" )
-@ClassVersion( sourceVersion = "$Id: TestI18nUtil.java 895 2021-04-05 12:40:34Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TestI18nUtil.java 992 2022-01-16 19:51:31Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.i18n.TestI18nUtil" )
 public class TestI18nUtil extends TestBaseClass
 {
@@ -102,6 +106,25 @@ public class TestI18nUtil extends TestBaseClass
         assertEquals( expected, actual );
     }   //  testComposeTextKey3()
 
+    /**
+     *  Tests for
+     *  {@link I18nUtil#loadResourceBundle(String)} .
+     *
+     *  @throws Exception   Something unexpected went wrong.
+     */
+    @Test
+    final void testLoadResourceBundle() throws Exception
+    {
+        skipThreadTest();
+
+        String bundleName;
+
+        assertThrows( NullArgumentException.class, () -> loadResourceBundle( null ) );
+        assertThrows( EmptyArgumentException.class, () -> loadResourceBundle( EMPTY_STRING ) );
+
+        bundleName = "This.One.Does.Not.Exist";
+        assertTrue( loadResourceBundle( bundleName ).isEmpty() );
+    }   //  testLoadResourceBundle()
     /**
      *  Validates whether the class is static.
      */
