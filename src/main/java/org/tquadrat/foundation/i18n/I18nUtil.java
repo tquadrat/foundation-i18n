@@ -25,7 +25,7 @@ import static org.apiguardian.api.API.Status.STABLE;
 import static org.tquadrat.foundation.i18n.TextUse.STRING;
 import static org.tquadrat.foundation.lang.CommonConstants.ISO8859_1;
 import static org.tquadrat.foundation.lang.CommonConstants.PROPERTY_RESOURCEBUNDLE_ENCODING;
-import static org.tquadrat.foundation.lang.DebugOutput.debugOutput;
+import static org.tquadrat.foundation.lang.DebugOutput.ifDebug;
 import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;
 import static org.tquadrat.foundation.lang.Objects.requireNotEmptyArgument;
 import static org.tquadrat.foundation.util.StringUtils.format;
@@ -45,13 +45,13 @@ import org.tquadrat.foundation.lang.Objects;
  *  Utilities that are related to the i18n feature.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: I18nUtil.java 992 2022-01-16 19:51:31Z tquadrat $
+ *  @version $Id: I18nUtil.java 993 2022-01-19 22:26:20Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
 @UtilityClass
-@ClassVersion( sourceVersion = "$Id: I18nUtil.java 992 2022-01-16 19:51:31Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: I18nUtil.java 993 2022-01-19 22:26:20Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public final class I18nUtil
 {
@@ -240,7 +240,7 @@ public final class I18nUtil
         }
         catch( final MissingResourceException e )
         {
-            debugOutput( e );
+            ifDebug( e );
             bundle = null;
         }
 
