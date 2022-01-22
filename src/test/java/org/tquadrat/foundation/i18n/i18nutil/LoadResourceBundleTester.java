@@ -17,14 +17,13 @@
 
 package org.tquadrat.foundation.i18n.i18nutil;
 
-import static java.lang.Boolean.getBoolean;
 import static java.lang.System.err;
 import static java.lang.System.out;
 import static org.apiguardian.api.API.Status.STABLE;
 import static org.tquadrat.foundation.i18n.I18nUtil.loadResourceBundle;
-import static org.tquadrat.foundation.lang.CommonConstants.PROPERTY_IS_DEBUG;
-import static org.tquadrat.foundation.lang.CommonConstants.PROPERTY_IS_TEST;
-import static org.tquadrat.foundation.lang.DebugOutput.debugOutput;
+import static org.tquadrat.foundation.lang.DebugOutput.ifDebug;
+import static org.tquadrat.foundation.lang.DebugOutput.isDebug;
+import static org.tquadrat.foundation.lang.DebugOutput.isTest;
 
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -63,23 +62,24 @@ public final class LoadResourceBundleTester
      *
      *  @param  args    The command line arguments.
      */
+    @SuppressWarnings( "GrazieInspection" )
     public static final void main( final String... args )
     {
         try
         {
-            out.printf( "isDebug = %b%n", getBoolean( PROPERTY_IS_DEBUG ) );
-            out.printf( "isTest  = %b%n", getBoolean( PROPERTY_IS_TEST ) );
+            out.printf( "isDebug = %b%n", isDebug() );
+            out.printf( "isTest  = %b%n", isTest() );
 
             String bundleName;
             Optional<ResourceBundle> bundle;
 
             bundleName = "This.One.Does.Not.Exist";
             bundle = loadResourceBundle( bundleName );
-            debugOutput( bundle::isPresent, "Found Bundle: %s"::formatted, bundleName );
+            ifDebug( bundle::isPresent, "Found Bundle: %s"::formatted, bundleName );
 
             bundleName = "com.foo.bar.Texts";
             bundle = loadResourceBundle( bundleName );
-            debugOutput( bundle::isPresent, "Found Bundle: %s"::formatted, bundleName );
+            ifDebug( bundle::isPresent, "Found Bundle: %s"::formatted, bundleName );
         }
         catch( final Throwable t )
         {

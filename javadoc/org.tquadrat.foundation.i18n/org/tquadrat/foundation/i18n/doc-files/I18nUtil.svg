@@ -7,7 +7,7 @@
      version='1.1'
      baseProfile='full'
      width='1272.000'
-     height='693.000'>
+     height='704.000'>
     <defs>
         <style><![CDATA[
             line
@@ -118,7 +118,7 @@
         </marker>
         <clipPath id='ID000001'>
             <rect class='focusClass'
-                  height='271.000'
+                  height='282.000'
                   width='1222.000'
                   x='0.000'
                   y='0.000'/>
@@ -130,7 +130,7 @@
                     <rect x='0.000'
                           y='0.000'
                           width='1222.000'
-                          height='271.000'
+                          height='282.000'
                           class='focusClass'/>
                     <line x1='0.000'
                           y1='17.000'
@@ -177,33 +177,36 @@
                           class='static'>+ loadResourceBundle(baseBundleName:java.lang.String):java.util.Optional&lt;java.util.ResourceBundle&gt;</text>
                     <text x='5.000'
                           y='168.000'
-                          class='static'>+ resolveMessage(bundle:java.util.Optional&lt;java.util.ResourceBundle&gt;,message:java.lang.String,messageKey:java.lang.String,args:java.lang.Object&#x2026;):java.lang.String</text>
+                          class='static'>+ loadResourceBundle(baseBundleName:java.lang.String,module:java.lang.Module):java.util.Optional&lt;java.util.ResourceBundle&gt;</text>
                     <text x='5.000'
                           y='179.000'
-                          class='static'>+ resolveMessage(bundle:java.util.Optional&lt;java.util.ResourceBundle&gt;,message:java.util.Optional&lt;java.lang.String&gt;,messageKey:java.util.Optional&lt;java.lang.String&gt;,args:java.lang.Object&#x2026;):java.lang.String</text>
+                          class='static'>+ resolveMessage(bundle:java.util.Optional&lt;java.util.ResourceBundle&gt;,message:java.lang.String,messageKey:java.lang.String,args:java.lang.Object&#x2026;):java.lang.String</text>
                     <text x='5.000'
                           y='190.000'
-                          class='static'>+ resolveText(bundle:java.util.Optional&lt;java.util.ResourceBundle&gt;,text:java.lang.String,textKey:java.lang.String,args:java.lang.Object&#x2026;):java.lang.String</text>
+                          class='static'>+ resolveMessage(bundle:java.util.Optional&lt;java.util.ResourceBundle&gt;,message:java.util.Optional&lt;java.lang.String&gt;,messageKey:java.util.Optional&lt;java.lang.String&gt;,args:java.lang.Object&#x2026;):java.lang.String</text>
                     <text x='5.000'
                           y='201.000'
-                          class='static'>+ resolveText(bundle:java.util.Optional&lt;java.util.ResourceBundle&gt;,text:java.util.Optional&lt;java.lang.String&gt;,textKey:java.util.Optional&lt;java.lang.String&gt;,args:java.lang.Object&#x2026;):java.lang.String</text>
+                          class='static'>+ resolveText(bundle:java.util.Optional&lt;java.util.ResourceBundle&gt;,text:java.lang.String,textKey:java.lang.String,args:java.lang.Object&#x2026;):java.lang.String</text>
                     <text x='5.000'
                           y='212.000'
-                          class='static'>+ resolveText(bundle:java.util.Optional&lt;java.util.ResourceBundle&gt;,value:E):java.lang.String</text>
+                          class='static'>+ resolveText(bundle:java.util.Optional&lt;java.util.ResourceBundle&gt;,text:java.util.Optional&lt;java.lang.String&gt;,textKey:java.util.Optional&lt;java.lang.String&gt;,args:java.lang.Object&#x2026;):java.lang.String</text>
                     <text x='5.000'
                           y='223.000'
-                          class='static'>+ retrieveMessage(bundle:java.util.ResourceBundle,messagePrefix:java.lang.String,id:int,addKey:boolean,args:java.lang.Object&#x2026;):java.lang.String</text>
+                          class='static'>+ resolveText(bundle:java.util.Optional&lt;java.util.ResourceBundle&gt;,value:E):java.lang.String</text>
                     <text x='5.000'
                           y='234.000'
-                          class='static'>+ retrieveMessage(bundle:java.util.ResourceBundle,messagePrefix:java.lang.String,id:java.lang.String,addKey:boolean,args:java.lang.Object&#x2026;):java.lang.String</text>
+                          class='static'>+ retrieveMessage(bundle:java.util.ResourceBundle,messagePrefix:java.lang.String,id:int,addKey:boolean,args:java.lang.Object&#x2026;):java.lang.String</text>
                     <text x='5.000'
                           y='245.000'
-                          class='static'>- retrieveMessage(bundle:java.util.ResourceBundle,key:java.lang.String,addKey:boolean,args:java.lang.Object&#x2026;):java.lang.String</text>
+                          class='static'>+ retrieveMessage(bundle:java.util.ResourceBundle,messagePrefix:java.lang.String,id:java.lang.String,addKey:boolean,args:java.lang.Object&#x2026;):java.lang.String</text>
                     <text x='5.000'
                           y='256.000'
-                          class='static'>+ retrieveText(bundle:java.util.ResourceBundle,key:java.lang.String,args:java.lang.Object&#x2026;):java.lang.String</text>
+                          class='static'>- retrieveMessage(bundle:java.util.ResourceBundle,key:java.lang.String,addKey:boolean,args:java.lang.Object&#x2026;):java.lang.String</text>
                     <text x='5.000'
                           y='267.000'
+                          class='static'>+ retrieveText(bundle:java.util.ResourceBundle,key:java.lang.String,args:java.lang.Object&#x2026;):java.lang.String</text>
+                    <text x='5.000'
+                          y='278.000'
                           class='static'>+ retrieveText(bundle:java.util.ResourceBundle,value:E):java.lang.String</text>
                 </g>
             </g>

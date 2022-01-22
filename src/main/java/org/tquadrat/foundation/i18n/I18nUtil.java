@@ -216,9 +216,15 @@ public final class I18nUtil
     }   //  createFallback()
 
     /**
-     *  Loads the resource bundle with the given base bundle name. If there is
-     *  no resource bundle for the given base bundle name, the return value is
-     *  {@linkplain Optional#empty() empty}.
+     *  <p>{@summary Loads the resource bundle with the given base bundle
+     *  name.} If there is no resource bundle for the given base bundle name,
+     *  the return value is
+     *  {@linkplain Optional#empty() empty}.</p>
+     *  <p>If your program is using modules, the module that contains the
+     *  resource bundle must be located in the default package (no package at
+     *  all), or you should use
+     *  {@link #loadResourceBundle(String, Module)}
+     *  instead of this method.</p>
      *
      *  @param  baseBundleName  The base bundle name.
      *  @return An instance of
@@ -237,6 +243,50 @@ public final class I18nUtil
         {
             final var bundleName = requireNotEmptyArgument( baseBundleName, "baseBundleName" );
             bundle = ResourceBundle.getBundle( bundleName );
+        }
+        catch( final MissingResourceException e )
+        {
+            ifDebug( e );
+            //noinspection AssignmentToNull
+            bundle = null;
+        }
+
+        final var retValue = Optional.ofNullable( bundle );
+
+        //---* Done *----------------------------------------------------------
+        return retValue;
+    }   //  loadResourceBundle()
+
+    /**
+     *  <p>{@summary Loads the resource bundle with the given base bundle
+     *  name.} If there is no resource bundle for the given base bundle name,
+     *  the return value is
+     *  {@linkplain Optional#empty() empty}.</p>
+     *  <p>Use this method only if your program is using modules; otherwise
+     *  prefer
+     *  {@link #loadResourceBundle(String)}.</p>
+     *  <p>The resource bundle to load must be in an package that is open this
+     *  module ({@code org.tquadrat.foundation.i18n}) or in no package at
+     *  all.</p>
+     *
+     *  @param  baseBundleName  The base bundle name.
+     *  @param  module  The module that provides the resource bundle; usually,
+     *      this is the caller's module.
+     *  @return An instance of
+     *      {@link Optional}
+     *      that holds the resource bundle.
+     */
+    @SuppressWarnings( "AssignmentToNull" )
+    @API( status = STABLE, since = "0.1.0" )
+    public static final Optional<ResourceBundle> loadResourceBundle( final String baseBundleName, final Module module )
+    {
+        //---* Force the use of UTF-8 for the resource bundle files *----------
+        setProperty( PROPERTY_RESOURCEBUNDLE_ENCODING, ISO8859_1.name() );
+
+        ResourceBundle bundle;
+        try
+        {
+            bundle = ResourceBundle.getBundle( requireNotEmptyArgument( baseBundleName, "baseBundleName" ), requireNonNullArgument( module, "module" ) );
         }
         catch( final MissingResourceException e )
         {

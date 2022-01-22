@@ -125,6 +125,7 @@ public class TestI18nUtil extends TestBaseClass
         bundleName = "This.One.Does.Not.Exist";
         assertTrue( loadResourceBundle( bundleName ).isEmpty() );
     }   //  testLoadResourceBundle()
+
     /**
      *  Validates whether the class is static.
      */
