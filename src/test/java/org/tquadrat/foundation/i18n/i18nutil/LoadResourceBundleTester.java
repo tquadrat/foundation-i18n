@@ -38,11 +38,11 @@ import org.tquadrat.foundation.i18n.I18nUtil;
  *  Playing around with
  *  {@link I18nUtil#load}
  *
- *  @version $Id: LoadResourceBundleTester.java 992 2022-01-16 19:51:31Z tquadrat $
+ *  @version $Id: LoadResourceBundleTester.java 995 2022-01-23 01:09:35Z tquadrat $
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
  */
 @PlaygroundClass
-@ClassVersion( sourceVersion = "$Id: LoadResourceBundleTester.java 992 2022-01-16 19:51:31Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: LoadResourceBundleTester.java 995 2022-01-23 01:09:35Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public final class LoadResourceBundleTester
 {

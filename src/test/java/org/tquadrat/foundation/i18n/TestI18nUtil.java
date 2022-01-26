@@ -41,7 +41,7 @@ import org.tquadrat.foundation.testutil.TestBaseClass;
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
  */
-@ClassVersion( sourceVersion = "$Id: TestI18nUtil.java 992 2022-01-16 19:51:31Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TestI18nUtil.java 995 2022-01-23 01:09:35Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.i18n.TestI18nUtil" )
 public class TestI18nUtil extends TestBaseClass
 {

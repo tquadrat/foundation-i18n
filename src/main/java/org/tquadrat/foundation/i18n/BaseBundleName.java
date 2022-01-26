@@ -56,13 +56,13 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  accessible from everywhere.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: BaseBundleName.java 993 2022-01-19 22:26:20Z tquadrat $
+ *  @version $Id: BaseBundleName.java 995 2022-01-23 01:09:35Z tquadrat $
  *  @since 0.1.0
  */
 @Documented
 @Retention( SOURCE )
 @Target( FIELD )
-@ClassVersion( sourceVersion = "$Id: BaseBundleName.java 993 2022-01-19 22:26:20Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: BaseBundleName.java 995 2022-01-23 01:09:35Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public @interface BaseBundleName
 {
