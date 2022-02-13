@@ -291,8 +291,8 @@
  *  <span class="source-line-no">106</span>        description = "The colour 'red'",
  *  <span class="source-line-no">107</span>        translations =
  *  <span class="source-line-no">108</span>        {
- *  <span class="source-line-no">109</span>            &#64;Translation( locale = "en", text = "red" ),
- *  <span class="source-line-no">110</span>            &#64;Translation( locale = "de", text = "rot" )
+ *  <span class="source-line-no">109</span>            &#64;Translation( language = "en", text = "red" ),
+ *  <span class="source-line-no">110</span>            &#64;Translation( language = "de", text = "rot" )
  *  <span class="source-line-no">111</span>        }
  *  <span class="source-line-no">112</span>    )
  *  <span class="source-line-no">113</span>    RED,
@@ -302,8 +302,8 @@
  *  <span class="source-line-no">117</span>        description = "The colour 'yellow'",
  *  <span class="source-line-no">118</span>        translations =
  *  <span class="source-line-no">119</span>        {
- *  <span class="source-line-no">120</span>            &#64;Translation( locale = "en", text = "yellow" ),
- *  <span class="source-line-no">121</span>            &#64;Translation( locale = "de", text = "gelb" )
+ *  <span class="source-line-no">120</span>            &#64;Translation( language = "en", text = "yellow" ),
+ *  <span class="source-line-no">121</span>            &#64;Translation( language = "de", text = "gelb" )
  *  <span class="source-line-no">122</span>        }
  *  <span class="source-line-no">123</span>    )
  *  <span class="source-line-no">124</span>    YELLOW,
@@ -414,8 +414,10 @@
  *  {@value org.tquadrat.foundation.i18n.I18nUtil#ADDITIONAL_TEXT_LOCATION},
  *  or it can be provided through the annotation
  *  {@link org.tquadrat.foundation.i18n.UseAdditionalTexts &#64;UseAdditionalTexts}.</p>
- *  <p>That file has to comply the DTD defined in
- *  {@href doc-files/AdditionalText.dtd.html <code>AdditionalText.dtd</code>}.</p>
+ *  <p>That file has to comply the DTD below, defined in
+ *  {@code AdditionalText.dtd}.</p>
+ *  <h4>AdditionalText.dtd</h4>
+ *  <p>{@include ${resources}/AdditionalText.dtd:SOURCE}</p>
  */
 
 package org.tquadrat.foundation.i18n;
