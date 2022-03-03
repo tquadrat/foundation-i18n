@@ -19,7 +19,7 @@ Refer also to [`foundation-i18n-ap`](https://tquadrat.github.io/foundation-i18n-
     dependencies {
       …
   
-      //---* The tquadrat Internationalisation stuff *------------------------
+      //---* The tquadrat Foundation Internationalisation stuff *--------------
       implementation 'org.tquadrat.library:org.tquadrat.foundation.i18n:0.1.0'
       annotationProcessor 'org.tquadrat.tool:org.tquadrat.foundation.i18n.ap:0.1.0'
       …
