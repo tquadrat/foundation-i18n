@@ -45,13 +45,13 @@ import org.tquadrat.foundation.lang.Objects;
  *  Utilities that are related to the i18n feature.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: I18nUtil.java 995 2022-01-23 01:09:35Z tquadrat $
+ *  @version $Id: I18nUtil.java 1043 2023-01-01 11:27:56Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
 @UtilityClass
-@ClassVersion( sourceVersion = "$Id: I18nUtil.java 995 2022-01-23 01:09:35Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: I18nUtil.java 1043 2023-01-01 11:27:56Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public final class I18nUtil
 {
@@ -191,8 +191,7 @@ public final class I18nUtil
     {
         final var sourceClass = requireNonNullArgument( value, "value" ).getDeclaringClass();
         final var id = value.name();
-        final var use = STRING;
-        final var retValue = composeTextKey( sourceClass, use, id );
+        final var retValue = composeTextKey( sourceClass, STRING, id );
 
         //---* Done *----------------------------------------------------------
         return retValue;
@@ -265,8 +264,8 @@ public final class I18nUtil
      *  <p>Use this method only if your program is using modules; otherwise
      *  prefer
      *  {@link #loadResourceBundle(String)}.</p>
-     *  <p>The resource bundle to load must be in an package that is open this
-     *  module ({@code org.tquadrat.foundation.i18n}) or in no package at
+     *  <p>The resource bundle to load must be in an package that is open to
+     *  this module ({@code org.tquadrat.foundation.i18n}) or in no package at
      *  all.</p>
      *
      *  @param  baseBundleName  The base bundle name.
@@ -346,9 +345,9 @@ public final class I18nUtil
     @API( status = DEPRECATED, since = "0.0.2" )
     public static final String resolveMessage( final Optional<ResourceBundle> bundle, final Optional<String> message, final Optional<String> messageKey, final Object... args )
     {
-        final var _message = requireNonNullArgument( message, "message" ).orElse( "[MissingMessage] – %s" );
-        final var _messageKey = requireNonNullArgument( messageKey, "messageKey" ).orElse( "MissingMessage" );
-        final var retValue = resolveMessage( bundle, _message, _messageKey, args );
+        final var messageLocal = requireNonNullArgument( message, "message" ).orElse( "[MissingMessage] – %s" );
+        final var messageKeyLocal = requireNonNullArgument( messageKey, "messageKey" ).orElse( "MissingMessage" );
+        final var retValue = resolveMessage( bundle, messageLocal, messageKeyLocal, args );
 
         //---* Done *----------------------------------------------------------
         return retValue;
@@ -412,9 +411,9 @@ public final class I18nUtil
     @API( status = STABLE, since = "0.1.0" )
     public static final String resolveText( final Optional<ResourceBundle> bundle, final Optional<String> text, final Optional<String> textKey, final Object... args )
     {
-        final var _message = requireNonNullArgument( text, "text" ).orElse( createFallback( "MissingText", args ) );
-        final var _messageKey = requireNonNullArgument( textKey, "textKey" ).orElse( "MissingTextKey" );
-        final var retValue = resolveText( bundle, _message, _messageKey, args );
+        final var messageLocal = requireNonNullArgument( text, "text" ).orElse( createFallback( "MissingText", args ) );
+        final var messageKeyLocal = requireNonNullArgument( textKey, "textKey" ).orElse( "MissingTextKey" );
+        final var retValue = resolveText( bundle, messageLocal, messageKeyLocal, args );
 
         //---* Done *----------------------------------------------------------
         return retValue;
@@ -540,7 +539,7 @@ public final class I18nUtil
             final var format = requireNonNullArgument( bundle, "bundle" ).getString( requireNotEmptyArgument( key, "key" ) );
             retValue = format( format, args ).translateEscapes();
         }
-        catch( @SuppressWarnings( "unused" ) final MissingResourceException e )
+        catch( final MissingResourceException ignored )
         {
             retValue = createFallback( key, args );
         }
