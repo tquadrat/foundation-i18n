@@ -41,7 +41,7 @@ import org.tquadrat.foundation.testutil.TestBaseClass;
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
  */
-@ClassVersion( sourceVersion = "$Id: TestI18nUtil.java 995 2022-01-23 01:09:35Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TestI18nUtil.java 1062 2023-09-25 23:11:41Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.i18n.TestI18nUtil" )
 public class TestI18nUtil extends TestBaseClass
 {
@@ -117,7 +117,7 @@ public class TestI18nUtil extends TestBaseClass
     {
         skipThreadTest();
 
-        String bundleName;
+        final String bundleName;
 
         assertThrows( NullArgumentException.class, () -> loadResourceBundle( null ) );
         assertThrows( EmptyArgumentException.class, () -> loadResourceBundle( EMPTY_STRING ) );

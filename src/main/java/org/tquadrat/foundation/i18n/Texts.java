@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2021 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  *
@@ -35,12 +35,13 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  annotations.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: Texts.java 882 2021-02-27 19:01:25Z tquadrat $
+ *  @version $Id: Texts.java 1062 2023-09-25 23:11:41Z tquadrat $
  *  @since 0.1.0
  */
+@SuppressWarnings( "NewClassNamingConvention" )
 @Retention( SOURCE )
 @Target( {FIELD, METHOD} )
-@ClassVersion( sourceVersion = "$Id: Texts.java 882 2021-02-27 19:01:25Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: Texts.java 1062 2023-09-25 23:11:41Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public @interface Texts
 {

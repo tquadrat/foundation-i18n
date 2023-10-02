@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2021 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -169,13 +169,14 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  {@link String#translateEscapes()}.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: Text.java 882 2021-02-27 19:01:25Z tquadrat $
+ *  @version $Id: Text.java 1062 2023-09-25 23:11:41Z tquadrat $
  *  @since 0.1.0
  */
+@SuppressWarnings( "NewClassNamingConvention" )
 @Retention( SOURCE )
 @Target( {FIELD, METHOD} )
 @Repeatable( Texts.class )
-@ClassVersion( sourceVersion = "$Id: Text.java 882 2021-02-27 19:01:25Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: Text.java 1062 2023-09-25 23:11:41Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public @interface Text
 {
@@ -213,7 +214,7 @@ public @interface Text
      *
      *  @return The id, if set; otherwise the empty String.
      */
-    String id() default "";
+    @SuppressWarnings( "NewMethodNamingConvention" ) String id() default "";
 
     /**
      *  Returns the list of valid translations for the text.

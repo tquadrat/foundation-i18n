@@ -45,8 +45,7 @@ import org.tquadrat.foundation.testutil.impl.ResourceBundleImpl;
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
  */
-@SuppressWarnings( "MisorderedAssertEqualsArguments" )
-@ClassVersion( sourceVersion = "$Id: TestRetrieveText.java 895 2021-04-05 12:40:34Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TestRetrieveText.java 1062 2023-09-25 23:11:41Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.i18n.TestI18nUtil" )
 public class TestRetrieveText extends TestBaseClass
 {
