@@ -17,6 +17,7 @@
 
 package org.tquadrat.foundation.i18n.i18nutil;
 
+import static java.lang.String.format;
 import static java.lang.System.out;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -24,7 +25,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 import static org.tquadrat.foundation.i18n.I18nUtil.composeTextKey;
 import static org.tquadrat.foundation.lang.CommonConstants.EMPTY_STRING;
-import static org.tquadrat.foundation.util.StringUtils.format;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -44,7 +44,7 @@ import org.tquadrat.foundation.testutil.TestBaseClass;
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
  */
-@ClassVersion( sourceVersion = "$Id: TestComposeTextKey.java 888 2021-03-29 21:59:02Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TestComposeTextKey.java 1076 2023-10-03 18:36:07Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.i18n.i18nutil.TestComposeTextKey" )
 public class TestComposeTextKey extends TestBaseClass
 {

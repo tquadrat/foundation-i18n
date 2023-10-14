@@ -17,6 +17,7 @@
 
 package org.tquadrat.foundation.i18n.i18nutil;
 
+import static java.lang.String.format;
 import static java.lang.System.out;
 import static org.apiguardian.api.API.Status.STABLE;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,7 +28,6 @@ import static org.junit.jupiter.api.Assertions.fail;
 import static org.tquadrat.foundation.i18n.I18nUtil.createFallback;
 import static org.tquadrat.foundation.lang.CommonConstants.EMPTY_Object_ARRAY;
 import static org.tquadrat.foundation.lang.CommonConstants.EMPTY_STRING;
-import static org.tquadrat.foundation.util.StringUtils.format;
 
 import java.time.Instant;
 import java.util.Locale;
@@ -46,7 +46,7 @@ import org.tquadrat.foundation.testutil.TestBaseClass;
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
  */
-@ClassVersion( sourceVersion = "$Id: TestCreateFallback.java 891 2021-04-02 08:07:35Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TestCreateFallback.java 1076 2023-10-03 18:36:07Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 @DisplayName( "org.tquadrat.foundation.i18n.i18nutil.TestCreateFallback" )
 public class TestCreateFallback extends TestBaseClass
