@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2023 by Thomas Thrien.
+ * Copyright © 2002-2024 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  *
@@ -20,7 +20,6 @@ package org.tquadrat.foundation.i18n;
 
 import static java.lang.String.format;
 import static java.lang.System.setProperty;
-import static org.apiguardian.api.API.Status.DEPRECATED;
 import static org.apiguardian.api.API.Status.INTERNAL;
 import static org.apiguardian.api.API.Status.STABLE;
 import static org.tquadrat.foundation.i18n.TextUse.STRING;
@@ -45,13 +44,13 @@ import org.tquadrat.foundation.lang.Objects;
  *  Utilities that are related to the i18n feature.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: I18nUtil.java 1076 2023-10-03 18:36:07Z tquadrat $
+ *  @version $Id: I18nUtil.java 1085 2024-01-05 16:23:28Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
 @UtilityClass
-@ClassVersion( sourceVersion = "$Id: I18nUtil.java 1076 2023-10-03 18:36:07Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: I18nUtil.java 1085 2024-01-05 16:23:28Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public final class I18nUtil
 {
@@ -298,60 +297,6 @@ public final class I18nUtil
         //---* Done *----------------------------------------------------------
         return retValue;
     }   //  loadResourceBundle()
-
-    /**
-     *  Returns the message for the given key, or the alternative text.
-     *
-     *  @param  bundle  The resource bundle.
-     *  @param  message The message.
-     *  @param  messageKey  The resource bundle key for the alternative
-     *      message.
-     *  @param  args    The argument for the alternative message.
-     *  @return The resolved message.
-     *
-     *  @deprecated Use
-     *      {@link #resolveText(Optional, String, String, Object...)}
-     *      instead.
-     */
-    @SuppressWarnings( {"OptionalUsedAsFieldOrParameterType", "BoundedWildcard"} )
-    @Deprecated( forRemoval = true, since = "0.0.2" )
-    @API( status = DEPRECATED, since = "0.0.2" )
-    public static final String resolveMessage( final Optional<ResourceBundle> bundle, final String message, final String messageKey, final Object... args )
-    {
-        final var retValue = requireNonNullArgument( bundle, "bundle" ).isPresent() && isNotEmptyOrBlank( messageKey )
-            ? retrieveText( bundle.get(), messageKey, args )
-            : requireNotEmptyArgument( message, "message" );
-
-        //---* Done *----------------------------------------------------------
-        return retValue;
-    }   //  resolveMessage()
-
-    /**
-     *  Returns the message for the given key, or the alternative text.
-     *
-     *  @param  bundle  The resource bundle.
-     *  @param  message The message.
-     *  @param  messageKey  The resource bundle key for the alternative
-     *      message.
-     *  @param  args    The argument for the alternative message.
-     *  @return The resolved message.
-     *
-     *  @deprecated Use
-     *      {@link #resolveText(Optional, Optional, Optional, Object...)}
-     *      instead.
-     */
-    @SuppressWarnings( "OptionalUsedAsFieldOrParameterType" )
-    @Deprecated( forRemoval = true, since = "0.0.2" )
-    @API( status = DEPRECATED, since = "0.0.2" )
-    public static final String resolveMessage( final Optional<ResourceBundle> bundle, final Optional<String> message, final Optional<String> messageKey, final Object... args )
-    {
-        final var messageLocal = requireNonNullArgument( message, "message" ).orElse( "[MissingMessage] – %s" );
-        final var messageKeyLocal = requireNonNullArgument( messageKey, "messageKey" ).orElse( "MissingMessage" );
-        final var retValue = resolveMessage( bundle, messageLocal, messageKeyLocal, args );
-
-        //---* Done *----------------------------------------------------------
-        return retValue;
-    }   //  resolveMessage()
 
     /**
      *  <p>{@summary Returns the Text for the given key, or the alternative
