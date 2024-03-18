@@ -58,6 +58,14 @@ public enum TextUse
     HELP,
 
     /**
+     *  A column header or alike.
+     *
+     *  @since 0.4.5
+     */
+    @API( status = STABLE, since = "0.4.5" )
+    HEADER,
+
+    /**
      *  The name of a menu entry.
      */
     MENU,
@@ -79,6 +87,14 @@ public enum TextUse
      *  A prompt text.
      */
     PROMPT,
+
+    /**
+     *  A section header or alike.
+     *
+     *  @since 0.4.5
+     */
+    @API( status = STABLE, since = "0.4.5" )
+    SECTION,
 
     /**
      *  The String representation for an {@code enum} value.
