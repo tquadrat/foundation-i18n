@@ -30,12 +30,12 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  @see org.tquadrat.foundation.i18n.I18nUtil#composeTextKey(Class,TextUse,String)
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: TextUse.java 882 2021-02-27 19:01:25Z tquadrat $
+ *  @version $Id: TextUse.java 1123 2024-03-19 10:06:45Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: TextUse.java 882 2021-02-27 19:01:25Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TextUse.java 1123 2024-03-19 10:06:45Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public enum TextUse
 {
@@ -53,6 +53,18 @@ public enum TextUse
     CAPTION,
 
     /**
+     *  The localised name of a file.
+     */
+    @API( status = STABLE, since = "0.4.6" )
+    FILE,
+
+    /**
+     *  The localised name of a folder/directory.
+     */
+    @API( status = STABLE, since = "0.4.6" )
+    FOLDER,
+
+    /**
      *  A help text.
      */
     HELP,
@@ -66,14 +78,20 @@ public enum TextUse
     HEADER,
 
     /**
-     *  The name of a menu entry.
+     *  A localised link or part of a link.
      */
-    MENU,
+    @API( status = STABLE, since = "0.4.6" )
+    LINK,
 
     /**
      *  The localised name of a property.
      */
     NAME,
+
+    /**
+     *  The name of a menu entry.
+     */
+    MENU,
 
     /**
      *  A message, although these are usually <i>messages</i>, defined with
