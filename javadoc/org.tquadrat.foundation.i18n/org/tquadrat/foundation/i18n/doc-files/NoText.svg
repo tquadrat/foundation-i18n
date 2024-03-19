@@ -155,7 +155,7 @@
                           class='abstract'>+ use():org.tquadrat.foundation.i18n.TextUse</text>
                     <text x='5.000'
                           y='69.000'
-                          class='abstract'>+ description():java.lang.String</text>
+                          class='abstract'>+ explanation():java.lang.String</text>
                 </g>
             </g>
         </symbol>

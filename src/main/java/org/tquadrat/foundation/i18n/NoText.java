@@ -17,8 +17,15 @@
 
 package org.tquadrat.foundation.i18n;
 
+import static java.lang.annotation.ElementType.FIELD;
+import static java.lang.annotation.ElementType.METHOD;
+import static java.lang.annotation.RetentionPolicy.SOURCE;
 import static org.apiguardian.api.API.Status.STABLE;
 import static org.tquadrat.foundation.i18n.TextUse.TEXTUSE_DEFAULT;
+
+import java.lang.annotation.Repeatable;
+import java.lang.annotation.Retention;
+import java.lang.annotation.Target;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
@@ -32,12 +39,15 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  processed in any way.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: NoText.java 1123 2024-03-19 10:06:45Z tquadrat $
+ *  @version $Id: NoText.java 1124 2024-03-19 11:02:47Z tquadrat $
  *  @since 0.4.6
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: NoText.java 1123 2024-03-19 10:06:45Z tquadrat $" )
+@Retention( SOURCE )
+@Target( {FIELD, METHOD} )
+@Repeatable( NoTexts.class )
+@ClassVersion( sourceVersion = "$Id: NoText.java 1124 2024-03-19 11:02:47Z tquadrat $" )
 @API( status = STABLE, since = "0.4.6" )
 public @interface NoText
 {
@@ -57,7 +67,7 @@ public @interface NoText
      *
      *  @return The description.
      */
-    String description() default "";
+    String explanation() default "";
 }
 //  @interface NoText
 
