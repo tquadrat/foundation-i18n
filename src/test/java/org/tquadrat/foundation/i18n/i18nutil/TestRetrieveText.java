@@ -32,7 +32,6 @@ import java.util.ResourceBundle;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.tquadrat.foundation.annotation.ClassVersion;
 import org.tquadrat.foundation.exception.EmptyArgumentException;
 import org.tquadrat.foundation.exception.NullArgumentException;
 import org.tquadrat.foundation.i18n.I18nUtil;
@@ -45,7 +44,6 @@ import org.tquadrat.foundation.testutil.impl.ResourceBundleImpl;
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
  */
-@ClassVersion( sourceVersion = "$Id: TestRetrieveText.java 1076 2023-10-03 18:36:07Z tquadrat $" )
 @DisplayName( "org.tquadrat.foundation.i18n.TestI18nUtil" )
 public class TestRetrieveText extends TestBaseClass
 {
