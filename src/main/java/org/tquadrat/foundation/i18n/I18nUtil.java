@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2024 by Thomas Thrien.
+ * Copyright © 2002-2025 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  *
@@ -44,13 +44,13 @@ import org.tquadrat.foundation.lang.Objects;
  *  Utilities that are related to the i18n feature.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: I18nUtil.java 1085 2024-01-05 16:23:28Z tquadrat $
+ *  @version $Id: I18nUtil.java 1151 2025-10-01 21:32:15Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
 @UtilityClass
-@ClassVersion( sourceVersion = "$Id: I18nUtil.java 1085 2024-01-05 16:23:28Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: I18nUtil.java 1151 2025-10-01 21:32:15Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public final class I18nUtil
 {
@@ -263,7 +263,7 @@ public final class I18nUtil
      *  <p>Use this method only if your program is using modules; otherwise
      *  prefer
      *  {@link #loadResourceBundle(String)}.</p>
-     *  <p>The resource bundle to load must be in an package that is open to
+     *  <p>The resource bundle to load must be in a package that is open to
      *  this module ({@code org.tquadrat.foundation.i18n}) or in no package at
      *  all.</p>
      *
