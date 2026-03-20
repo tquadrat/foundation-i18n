@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2021 by Thomas Thrien.
+ * Copyright © 2002-2026 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -35,7 +35,7 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  <p>The build process will take care of this definition and creates the
  *  required resource bundle properties files.</p>
  *  <p>Use this annotation as follows:</p>
- *  <pre><code>  &#64;Message
+ *  <div class="source-container"><pre>&#64;Message
  *  (
  *      description = "A message",
  *      translations =
@@ -44,9 +44,9 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *          &#64;Translation( language = "de", text = "Dies ist eine Nachricht in Deutsch" )
  *      }
  *  )
- *  public static final int MSG_MessageKey = 1704;</code></pre>
+ *  public static final int MSG_MessageKey = 1704;</pre></div>
  *  <p>or</p>
- *  <pre><code>  &#64;Message
+ *  <div class="source-container"><pre>&#64;Message
  *  (
  *      description = "A message",
  *      translations =
@@ -55,7 +55,7 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *          &#64;Translation( language = "de", text = "Dies ist eine Nachricht in Deutsch" )
  *      }
  *  )
- *  public static final String MSG_MessageKey = "AMessage";</code></pre>
+ *  public static final String MSG_MessageKey = "AMessage";</pre></div>
  *  <p>The value for the constant together with the prefix defined with the
  *  annotation
  *  {@link MessagePrefix}

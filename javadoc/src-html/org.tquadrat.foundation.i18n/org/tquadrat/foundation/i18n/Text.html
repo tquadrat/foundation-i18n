@@ -13,7 +13,7 @@
 <div class="source-container">
 <pre><span class="source-line-no">001</span><span id="line-1">/*</span>
 <span class="source-line-no">002</span><span id="line-2"> * ============================================================================</span>
-<span class="source-line-no">003</span><span id="line-3"> * Copyright © 2002-2023 by Thomas Thrien.</span>
+<span class="source-line-no">003</span><span id="line-3"> * Copyright © 2002-2026 by Thomas Thrien.</span>
 <span class="source-line-no">004</span><span id="line-4"> * All Rights Reserved.</span>
 <span class="source-line-no">005</span><span id="line-5"> * ============================================================================</span>
 <span class="source-line-no">006</span><span id="line-6"> * Licensed to the public under the agreements of the GNU Lesser General Public</span>
@@ -57,7 +57,7 @@
 <span class="source-line-no">044</span><span id="line-44"> *  describes the detection strategy. The build process takes care of the</span>
 <span class="source-line-no">045</span><span id="line-45"> *  generation of the resource bundle properties file.&lt;/p&gt;</span>
 <span class="source-line-no">046</span><span id="line-46"> *  &lt;p&gt;Use this annotation as follows:&lt;/p&gt;</span>
-<span class="source-line-no">047</span><span id="line-47"> *  &lt;pre&gt;&lt;code&gt;  &amp;hellip;</span>
+<span class="source-line-no">047</span><span id="line-47"> *  &lt;div class="source-container"&gt;&lt;pre&gt;&amp;hellip;</span>
 <span class="source-line-no">048</span><span id="line-48"> *  &amp;#64;Text</span>
 <span class="source-line-no">049</span><span id="line-49"> *  (</span>
 <span class="source-line-no">050</span><span id="line-50"> *      description = "A text",</span>
@@ -68,7 +68,7 @@
 <span class="source-line-no">055</span><span id="line-55"> *      }</span>
 <span class="source-line-no">056</span><span id="line-56"> *  )</span>
 <span class="source-line-no">057</span><span id="line-57"> *  private static final String TXT_TextKey = I18nUtil.composeTextKey( SampleClass.class, TextUse.TXT, "TextKey" );</span>
-<span class="source-line-no">058</span><span id="line-58"> *  &amp;hellip;&lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">058</span><span id="line-58"> *  &amp;hellip;&lt;/pre&gt;&lt;/div&gt;</span>
 <span class="source-line-no">059</span><span id="line-59"> *  &lt;p&gt;For the generation, the content of the field {@code TXT_TextKey} is</span>
 <span class="source-line-no">060</span><span id="line-60"> *  irrelevant, the key will be built from the name of the field plus the</span>
 <span class="source-line-no">061</span><span id="line-61"> *  fully qualified name of the class. But for the retrieval of the text, the</span>
@@ -77,16 +77,16 @@
 <span class="source-line-no">064</span><span id="line-64"> *  {@link TextUse}</span>
 <span class="source-line-no">065</span><span id="line-65"> *  and will be derived from the name; if this is not desired, an alternative</span>
 <span class="source-line-no">066</span><span id="line-66"> *  form of the annotation can be used:&lt;/p&gt;</span>
-<span class="source-line-no">067</span><span id="line-67"> *  &lt;pre&gt;&lt;code&gt;  &amp;hellip;</span>
+<span class="source-line-no">067</span><span id="line-67"> *  &lt;div class="source-container"&gt;&lt;pre&gt;&amp;hellip;</span>
 <span class="source-line-no">068</span><span id="line-68"> *  &amp;#64;Text</span>
 <span class="source-line-no">069</span><span id="line-69"> *  (</span>
 <span class="source-line-no">070</span><span id="line-70"> *      &amp;hellip;</span>
 <span class="source-line-no">071</span><span id="line-71"> *  )</span>
 <span class="source-line-no">072</span><span id="line-72"> *  private static final String m_TextKey = I18nUtil.composeTextKey( SampleClass.class, TextUse.TXT, "TextKey" );</span>
-<span class="source-line-no">073</span><span id="line-73"> *  &amp;hellip;&lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">073</span><span id="line-73"> *  &amp;hellip;&lt;/pre&gt;&lt;/div&gt;</span>
 <span class="source-line-no">074</span><span id="line-74"> *  &lt;p&gt;This works because {@code TXT} is the default for the text use.&lt;/p&gt;</span>
 <span class="source-line-no">075</span><span id="line-75"> *  &lt;p&gt;It is also possible to define the id and the text use explicitly:&lt;/p&gt;</span>
-<span class="source-line-no">076</span><span id="line-76"> *  &lt;pre&gt;&lt;code&gt;  &amp;hellip;</span>
+<span class="source-line-no">076</span><span id="line-76"> *  &lt;div class="source-container"&gt;&lt;pre&gt;&amp;hellip;</span>
 <span class="source-line-no">077</span><span id="line-77"> *  &amp;#64;Text</span>
 <span class="source-line-no">078</span><span id="line-78"> *  (</span>
 <span class="source-line-no">079</span><span id="line-79"> *      description = "A text",</span>
@@ -99,10 +99,10 @@
 <span class="source-line-no">086</span><span id="line-86"> *      }</span>
 <span class="source-line-no">087</span><span id="line-87"> *  )</span>
 <span class="source-line-no">088</span><span id="line-88"> *  private static final String m_Text = I18nUtil.composeTextKey( SampleClass.class, TextUse.TXT, "TextKey" );</span>
-<span class="source-line-no">089</span><span id="line-89"> *  &amp;hellip;&lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">089</span><span id="line-89"> *  &amp;hellip;&lt;/pre&gt;&lt;/div&gt;</span>
 <span class="source-line-no">090</span><span id="line-90"> *  &lt;p&gt;This format is required when the annotation is applied to a method, in</span>
 <span class="source-line-no">091</span><span id="line-91"> *  this case to a getter:&lt;/p&gt;</span>
-<span class="source-line-no">092</span><span id="line-92"> *  &lt;pre&gt;&lt;code&gt;  &amp;hellip;</span>
+<span class="source-line-no">092</span><span id="line-92"> *  &lt;div class="source-container"&gt;&lt;pre&gt;&amp;hellip;</span>
 <span class="source-line-no">093</span><span id="line-93"> *  &amp;#64;Text</span>
 <span class="source-line-no">094</span><span id="line-94"> *  (</span>
 <span class="source-line-no">095</span><span id="line-95"> *      description = "The name of the property",</span>
@@ -133,7 +133,7 @@
 <span class="source-line-no">120</span><span id="line-120"> *      }</span>
 <span class="source-line-no">121</span><span id="line-121"> *  )</span>
 <span class="source-line-no">122</span><span id="line-122"> *  public String getProperty();</span>
-<span class="source-line-no">123</span><span id="line-123"> *  &amp;hellip;&lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">123</span><span id="line-123"> *  &amp;hellip;&lt;/pre&gt;&lt;/div&gt;</span>
 <span class="source-line-no">124</span><span id="line-124"> *  &lt;p&gt;This sample would generate texts with the keys below, given that the</span>
 <span class="source-line-no">125</span><span id="line-125"> *  method belongs to the interface {@code com.sample.Example}:&lt;/p&gt;</span>
 <span class="source-line-no">126</span><span id="line-126"> *  &lt;ul&gt;</span>
@@ -144,7 +144,7 @@
 <span class="source-line-no">131</span><span id="line-131"> *  &lt;p&gt;If the method is not a getter, a setter or an &amp;quot;add&amp;quot; method,</span>
 <span class="source-line-no">132</span><span id="line-132"> *  both {@code id} and {@code use} are always mandatory.&lt;/p&gt;</span>
 <span class="source-line-no">133</span><span id="line-133"> *  &lt;p&gt;For {@code enum}s, this form is applicable:&lt;/p&gt;</span>
-<span class="source-line-no">134</span><span id="line-134"> *  &lt;pre&gt;&lt;code&gt;  &amp;hellip;</span>
+<span class="source-line-no">134</span><span id="line-134"> *  &lt;div class="source-container"&gt;&lt;pre&gt;&amp;hellip;</span>
 <span class="source-line-no">135</span><span id="line-135"> *  public enum WhatEver</span>
 <span class="source-line-no">136</span><span id="line-136"> *  {</span>
 <span class="source-line-no">137</span><span id="line-137"> *      &amp;#64;Text</span>
@@ -160,14 +160,14 @@
 <span class="source-line-no">147</span><span id="line-147"> *</span>
 <span class="source-line-no">148</span><span id="line-148"> *      &amp;hellip;</span>
 <span class="source-line-no">149</span><span id="line-149"> *  }</span>
-<span class="source-line-no">150</span><span id="line-150"> *  //  enum WhatEver&lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">150</span><span id="line-150"> *  //  enum WhatEver&lt;/pre&gt;&lt;/div&gt;</span>
 <span class="source-line-no">151</span><span id="line-151"> *  &lt;p&gt;The argument for</span>
 <span class="source-line-no">152</span><span id="line-152"> *  {@link java.util.ResourceBundle#getString(String) ResourceBundle.getString()}</span>
 <span class="source-line-no">153</span><span id="line-153"> *  in this case can be composed through a call to</span>
 <span class="source-line-no">154</span><span id="line-154"> *  {@link org.tquadrat.foundation.i18n.I18nUtil#composeTextKey(Enum) I18nUtil.composeTextKey()};</span>
 <span class="source-line-no">155</span><span id="line-155"> *  that can be used for the implementation of</span>
 <span class="source-line-no">156</span><span id="line-156"> *  {@code WhatEver.toString()} like this:&lt;/p&gt;</span>
-<span class="source-line-no">157</span><span id="line-157"> *  &lt;pre&gt;&lt;code&gt;  &amp;hellip;</span>
+<span class="source-line-no">157</span><span id="line-157"> *  &lt;div class="source-container"&gt;&lt;pre&gt;&amp;hellip;</span>
 <span class="source-line-no">158</span><span id="line-158"> *  public final toString()</span>
 <span class="source-line-no">159</span><span id="line-159"> *  {</span>
 <span class="source-line-no">160</span><span id="line-160"> *      String key = composeTextKey( this );</span>
@@ -176,7 +176,7 @@
 <span class="source-line-no">163</span><span id="line-163"> *      &amp;#47;&amp;#47;---* Done *-----------------------------------------------------------</span>
 <span class="source-line-no">164</span><span id="line-164"> *      return retValue;</span>
 <span class="source-line-no">165</span><span id="line-165"> *  }  &amp;#47;&amp;#47;  toString()</span>
-<span class="source-line-no">166</span><span id="line-166"> *  &amp;hellip;&lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">166</span><span id="line-166"> *  &amp;hellip;&lt;/pre&gt;&lt;/div&gt;</span>
 <span class="source-line-no">167</span><span id="line-167"> *  &lt;p&gt;Different from messages, it is somehow expected that the returned values</span>
 <span class="source-line-no">168</span><span id="line-168"> *  may contain escape sequences that can be converted by a call to</span>
 <span class="source-line-no">169</span><span id="line-169"> *  {@link String#translateEscapes()}.&lt;/p&gt;</span>

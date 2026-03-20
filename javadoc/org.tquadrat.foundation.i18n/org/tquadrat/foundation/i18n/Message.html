@@ -22,7 +22,7 @@ loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
 </noscript>
-<header role="banner"><div style="overflow:auto;"><img src="../../../../../resources/tquadrat_logo.jpg" alt="tquadrat.org"style="float:right;"><div style="font-family:sans-serif;font-size:40px;font-weight:bold;padding-left:30px;"><p>tquadrat's <i>Foundation</i> Library<br>org.tquadrat.foundation.i18n 0.25.2 API</p></div>      <p>Build: 2026-03-20T14:58:11.523434717Z[UTC]</p>      </div>
+<header role="banner"><div style="overflow:auto;"><img src="../../../../../resources/tquadrat_logo.jpg" alt="tquadrat.org"style="float:right;"><div style="font-family:sans-serif;font-size:40px;font-weight:bold;padding-left:30px;"><p>tquadrat's <i>Foundation</i> Library<br>org.tquadrat.foundation.i18n 0.25.2 API</p></div>      <p>Build: 2026-03-20T17:08:11.338247274Z[UTC]</p>      </div>
 <nav role="navigation">
 <!-- ========= START OF TOP NAVBAR ======= -->
 <div class="top-nav" id="navbar-top">
@@ -88,7 +88,7 @@ annotation
 <p>The build process will take care of this definition and creates the
 required resource bundle properties files.</p>
 <p>Use this annotation as follows:</p>
-<pre><code>  &#64;Message
+<div class="source-container"><pre>&#64;Message
 (
     description = "A message",
     translations =
@@ -97,9 +97,9 @@ required resource bundle properties files.</p>
         &#64;Translation( language = "de", text = "Dies ist eine Nachricht in Deutsch" )
     }
 )
-public static final int MSG_MessageKey = 1704;</code></pre>
+public static final int MSG_MessageKey = 1704;</pre></div>
 <p>or</p>
-<pre><code>  &#64;Message
+<div class="source-container"><pre>&#64;Message
 (
     description = "A message",
     translations =
@@ -108,7 +108,7 @@ public static final int MSG_MessageKey = 1704;</code></pre>
         &#64;Translation( language = "de", text = "Dies ist eine Nachricht in Deutsch" )
     }
 )
-public static final String MSG_MessageKey = "AMessage";</code></pre>
+public static final String MSG_MessageKey = "AMessage";</pre></div>
 <p>The value for the constant together with the prefix defined with the
 annotation
 <a href="MessagePrefix.html" title="annotation interface in org.tquadrat.foundation.i18n"><code>MessagePrefix</code></a>

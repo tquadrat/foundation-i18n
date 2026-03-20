@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2023 by Thomas Thrien.
+ * Copyright © 2002-2026 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -44,7 +44,7 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  describes the detection strategy. The build process takes care of the
  *  generation of the resource bundle properties file.</p>
  *  <p>Use this annotation as follows:</p>
- *  <pre><code>  &hellip;
+ *  <div class="source-container"><pre>&hellip;
  *  &#64;Text
  *  (
  *      description = "A text",
@@ -55,7 +55,7 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *      }
  *  )
  *  private static final String TXT_TextKey = I18nUtil.composeTextKey( SampleClass.class, TextUse.TXT, "TextKey" );
- *  &hellip;</code></pre>
+ *  &hellip;</pre></div>
  *  <p>For the generation, the content of the field {@code TXT_TextKey} is
  *  irrelevant, the key will be built from the name of the field plus the
  *  fully qualified name of the class. But for the retrieval of the text, the
@@ -64,16 +64,16 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  {@link TextUse}
  *  and will be derived from the name; if this is not desired, an alternative
  *  form of the annotation can be used:</p>
- *  <pre><code>  &hellip;
+ *  <div class="source-container"><pre>&hellip;
  *  &#64;Text
  *  (
  *      &hellip;
  *  )
  *  private static final String m_TextKey = I18nUtil.composeTextKey( SampleClass.class, TextUse.TXT, "TextKey" );
- *  &hellip;</code></pre>
+ *  &hellip;</pre></div>
  *  <p>This works because {@code TXT} is the default for the text use.</p>
  *  <p>It is also possible to define the id and the text use explicitly:</p>
- *  <pre><code>  &hellip;
+ *  <div class="source-container"><pre>&hellip;
  *  &#64;Text
  *  (
  *      description = "A text",
@@ -86,10 +86,10 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *      }
  *  )
  *  private static final String m_Text = I18nUtil.composeTextKey( SampleClass.class, TextUse.TXT, "TextKey" );
- *  &hellip;</code></pre>
+ *  &hellip;</pre></div>
  *  <p>This format is required when the annotation is applied to a method, in
  *  this case to a getter:</p>
- *  <pre><code>  &hellip;
+ *  <div class="source-container"><pre>&hellip;
  *  &#64;Text
  *  (
  *      description = "The name of the property",
@@ -120,7 +120,7 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *      }
  *  )
  *  public String getProperty();
- *  &hellip;</code></pre>
+ *  &hellip;</pre></div>
  *  <p>This sample would generate texts with the keys below, given that the
  *  method belongs to the interface {@code com.sample.Example}:</p>
  *  <ul>
@@ -131,7 +131,7 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  <p>If the method is not a getter, a setter or an &quot;add&quot; method,
  *  both {@code id} and {@code use} are always mandatory.</p>
  *  <p>For {@code enum}s, this form is applicable:</p>
- *  <pre><code>  &hellip;
+ *  <div class="source-container"><pre>&hellip;
  *  public enum WhatEver
  *  {
  *      &#64;Text
@@ -147,14 +147,14 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *
  *      &hellip;
  *  }
- *  //  enum WhatEver</code></pre>
+ *  //  enum WhatEver</pre></div>
  *  <p>The argument for
  *  {@link java.util.ResourceBundle#getString(String) ResourceBundle.getString()}
  *  in this case can be composed through a call to
  *  {@link org.tquadrat.foundation.i18n.I18nUtil#composeTextKey(Enum) I18nUtil.composeTextKey()};
  *  that can be used for the implementation of
  *  {@code WhatEver.toString()} like this:</p>
- *  <pre><code>  &hellip;
+ *  <div class="source-container"><pre>&hellip;
  *  public final toString()
  *  {
  *      String key = composeTextKey( this );
@@ -163,7 +163,7 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *      &#47;&#47;---* Done *-----------------------------------------------------------
  *      return retValue;
  *  }  &#47;&#47;  toString()
- *  &hellip;</code></pre>
+ *  &hellip;</pre></div>
  *  <p>Different from messages, it is somehow expected that the returned values
  *  may contain escape sequences that can be converted by a call to
  *  {@link String#translateEscapes()}.</p>
