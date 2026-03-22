@@ -17,15 +17,15 @@
 
 package org.tquadrat.foundation.i18n;
 
-import static java.lang.annotation.ElementType.FIELD;
-import static java.lang.annotation.RetentionPolicy.SOURCE;
-import static org.apiguardian.api.API.Status.STABLE;
+import org.apiguardian.api.API;
+import org.tquadrat.foundation.annotation.ClassVersion;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
-import org.apiguardian.api.API;
-import org.tquadrat.foundation.annotation.ClassVersion;
+import static java.lang.annotation.ElementType.FIELD;
+import static java.lang.annotation.RetentionPolicy.SOURCE;
+import static org.apiguardian.api.API.Status.STABLE;
 
 /**
  *  <p>{@summary Use this annotation to define the text for a message that has
@@ -62,12 +62,12 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  has to be unique.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: Message.java 882 2021-02-27 19:01:25Z tquadrat $
+ *  @version $Id: Message.java 1164 2026-03-20 17:38:18Z tquadrat $
  *  @since 0.1.0
  */
 @Retention( SOURCE )
 @Target( FIELD )
-@ClassVersion( sourceVersion = "$Id: Message.java 882 2021-02-27 19:01:25Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: Message.java 1164 2026-03-20 17:38:18Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public @interface Message
 {

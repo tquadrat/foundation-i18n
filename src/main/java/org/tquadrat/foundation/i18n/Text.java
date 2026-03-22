@@ -17,18 +17,18 @@
 
 package org.tquadrat.foundation.i18n;
 
-import static java.lang.annotation.ElementType.FIELD;
-import static java.lang.annotation.ElementType.METHOD;
-import static java.lang.annotation.RetentionPolicy.SOURCE;
-import static org.apiguardian.api.API.Status.STABLE;
-import static org.tquadrat.foundation.i18n.TextUse.TEXTUSE_DEFAULT;
+import org.apiguardian.api.API;
+import org.tquadrat.foundation.annotation.ClassVersion;
 
 import java.lang.annotation.Repeatable;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
-import org.apiguardian.api.API;
-import org.tquadrat.foundation.annotation.ClassVersion;
+import static java.lang.annotation.ElementType.FIELD;
+import static java.lang.annotation.ElementType.METHOD;
+import static java.lang.annotation.RetentionPolicy.SOURCE;
+import static org.apiguardian.api.API.Status.STABLE;
+import static org.tquadrat.foundation.i18n.TextUse.TEXTUSE_DEFAULT;
 
 /**
  *  <p>{@summary Use this annotation to define a text &ndash; usually for a UI
@@ -169,14 +169,14 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  {@link String#translateEscapes()}.</p>
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: Text.java 1062 2023-09-25 23:11:41Z tquadrat $
+ *  @version $Id: Text.java 1164 2026-03-20 17:38:18Z tquadrat $
  *  @since 0.1.0
  */
 @SuppressWarnings( "NewClassNamingConvention" )
 @Retention( SOURCE )
 @Target( {FIELD, METHOD} )
 @Repeatable( Texts.class )
-@ClassVersion( sourceVersion = "$Id: Text.java 1062 2023-09-25 23:11:41Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: Text.java 1164 2026-03-20 17:38:18Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public @interface Text
 {
