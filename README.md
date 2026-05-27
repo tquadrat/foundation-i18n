@@ -11,7 +11,7 @@ Refer also to [`foundation-i18n-ap`](https://tquadrat.github.io/foundation-i18n-
     <dependency>
       <groupId>org.tquadrat.library</groupId>
       <artifactId>org.tquadrat.foundation.i18n</artifactId>
-      <version>0.25.10</version>
+      <version>0.25.11</version>
     </dependency>
     ```
 - Gradle
@@ -20,8 +20,8 @@ Refer also to [`foundation-i18n-ap`](https://tquadrat.github.io/foundation-i18n-
       …
   
       //---* The tquadrat Foundation Internationalisation stuff *--------------
-      implementation 'org.tquadrat.library:org.tquadrat.foundation.i18n:0.25.10'
-      annotationProcessor 'org.tquadrat.tool:org.tquadrat.foundation.i18n.ap:0.25.10'
+      implementation 'org.tquadrat.library:org.tquadrat.foundation.i18n:0.25.11'
+      annotationProcessor 'org.tquadrat.tool:org.tquadrat.foundation.i18n.ap:0.25.11'
       …
     }  //  dependencies
     ```
@@ -29,4 +29,4 @@ Refer also to [`foundation-i18n-ap`](https://tquadrat.github.io/foundation-i18n-
 The current version for the annotation processor can be different from that for this component.
 
 ---  
-Last updated: 2026-05-25T23:12:34.90975017+02:00[Europe/Berlin]
+Last updated: 2026-05-27T21:11:07.749875933+02:00[Europe/Berlin]
