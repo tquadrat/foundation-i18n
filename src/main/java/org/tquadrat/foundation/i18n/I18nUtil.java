@@ -44,13 +44,13 @@ import org.tquadrat.foundation.lang.Objects;
  *  Utilities that are related to the i18n feature.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: I18nUtil.java 1151 2025-10-01 21:32:15Z tquadrat $
+ *  @version $Id: I18nUtil.java 1258 2026-06-04 18:33:06Z tquadrat $
  *  @since 0.1.0
  *
  *  @UMLGraph.link
  */
 @UtilityClass
-@ClassVersion( sourceVersion = "$Id: I18nUtil.java 1151 2025-10-01 21:32:15Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: I18nUtil.java 1258 2026-06-04 18:33:06Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public final class I18nUtil
 {
@@ -400,7 +400,7 @@ public final class I18nUtil
      *  @param  bundle  The resource bundle.
      *  @param  messagePrefix   The message prefix.
      *  @param  id  The id for the message.
-     *  @param  addKey  The recommended value is {@code true}; this means that
+     *  @param  addKey  The recommended value is {@true}; this means that
      *      the message will be prefixed with the generated message key.
      *  @param  args    The arguments for the message.
      *  @return The text.
@@ -422,7 +422,7 @@ public final class I18nUtil
      *  @param  bundle  The resource bundle.
      *  @param  messagePrefix   The message prefix.
      *  @param  id  The id for the message.
-     *  @param  addKey  The recommended value is {@code true}; this means that
+     *  @param  addKey  The recommended value is {@true}; this means that
      *      the message will be prefixed with the generated message key.
      *  @param  args    The arguments for the message.
      *  @return The text.
@@ -445,7 +445,7 @@ public final class I18nUtil
      *
      *  @param  bundle  The resource bundle.
      *  @param  key The key for the message.
-     *  @param  addKey  The recommended value is {@code true}; this means that
+     *  @param  addKey  The recommended value is {@true}; this means that
      *      the message will be prefixed with the generated message key.
      *  @param  args    The arguments for the message.
      *  @return The text.

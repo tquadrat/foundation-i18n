@@ -69,7 +69,7 @@ public class TestRetrieveText extends TestBaseClass
      *  Creates an instance of
      *  {@link ResourceBundle}.
      *
-     *  @param  texts   The texts; can be {@code null}.
+     *  @param  texts   The texts; can be {@null}.
      *
      *  @return The bundle instance.
      */

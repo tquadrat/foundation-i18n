@@ -87,7 +87,7 @@
  *      bundle to other modules. This is done through an instance of
  *      {@link java.util.spi.ResourceBundleProvider}.</p>
  *      <p>This flag controls whether the annotation processor will generate
- *      such a resource bundle provider; the default is{@code false}.</p></dd>
+ *      such a resource bundle provider; the default is{@false}.</p></dd>
  *  </dl>
  *  <p>If this annotation is not used at all, the constant
  *  {@value org.tquadrat.foundation.i18n.I18nUtil#DEFAULT_BASEBUNDLENAME}
@@ -232,7 +232,7 @@
  *      if missing, that key will be derived <i>from the name</i> of the
  *      annotated field.</p></dd>
  *      <dt><code>boolean addClass</code></dt>
- *      <dd><p>If this flag is {@code true}, the resource bundle key will be
+ *      <dd><p>If this flag is {@true}, the resource bundle key will be
  *      prepended by the fully qualified name of the class that contains the
  *      annotated field.</p></dd>
  *      <dt><code>&#64;Translation [] translations</code></dt>
