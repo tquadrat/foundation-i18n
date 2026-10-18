@@ -29,4 +29,4 @@ Refer also to [`foundation-i18n-ap`](https://tquadrat.github.io/foundation-i18n-
 The current version for the annotation processor can be different from that for this component.
 
 ---  
-Last updated: 2026-10-17T17:19:21.616445417+02:00[Europe/Berlin]
+Last updated: 2026-10-18T12:56:45.461310695+02:00[Europe/Berlin]
